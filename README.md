@@ -1,4 +1,4 @@
-<h2 align="center"> SysEPS - Sistemas de Cadastro de Empresa </h2>
+<h2 align="center"> SysEPS - Sistema de Cadastro de Empresa </h2>
 
 <h2>Back-end</h1>
 <ul>
