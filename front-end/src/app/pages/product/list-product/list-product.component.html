@@ -1,0 +1,39 @@
+<section class="secao">
+    <h1 class="secao-titulo">Produtos</h1>
+
+    <app-erro-msg></app-erro-msg>
+
+    <div class="container mx-auto">
+        <table class="table table-hover">
+            <caption>Lista de Produtos</caption>
+            <thead class="thead-light">
+                <tr>
+                    <th scope=""><strong>#</strong></th>
+                    <th scope="col"><strong>Id</strong></th>
+                    <th scope="col"><strong>Nome</strong></th>
+                    <th scope="col"><strong>Descrição</strong></th>
+                    <th scope="col"><strong>Preço</strong></th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let product of products">
+                <tr>
+                    <th>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radioStore" id="radioStore1" [value]="product" [(ngModel)]="productSelected">
+                        </div>
+                    </th>
+                    <th> {{ product.id }}</th>
+                    <td> {{ product.name }} </td>
+                    <td> {{ product.description }} </td>
+                    <td> {{ product.price }} </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="text-center">
+            <button type="button" class="btn btn-primary text-white" (click)="openModalAddProduct()" title="Adicionar"><i class="fa fa-save"></i></button>
+            <button type="button" class="btn btn-warning text-white" (click)="openModalEditProduct()" [disabled]="productSelected == undefined || productSelected == 0" title="Editar"><i class="fa fa-pencil"></i></button>
+            <button type="button" class="btn btn-danger text-white" (click)="delete()" [disabled]="productSelected == undefined || productSelected == 0" title="Remover"><i class="fa fa-trash"></i></button>
+        </div>
+    </div>
+</section>

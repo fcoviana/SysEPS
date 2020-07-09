@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    border: none;
+    font-weight: 300;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+}
+
+/*=========== SECAO GERAL ==========*/
+
+.secao {
+    background: white;
+    padding-top: 5%;
+}
+
+.secao-titulo {
+    font-size: x-large;
+    font-weight: bold;
+    margin-left: 25px;
+    padding-bottom: 3%;
+}
+
+.ver-mais button {
+    font-size: small;
+    font-weight: bold;
+    border: none;
+    background: none;
+    float: right;
+    margin-right: 10%;
+    outline-style: none;
+}
+
+section h1 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/*=========== SECAO CATEGORIAS ==========*/
+
+.secao-painel {
+    padding-left: 25%;
+}
+
+.card-category {
+    border-radius: 10px;
+    background-color: #ededed;
+    margin-bottom: 20%;
+    cursor: pointer;
+}
+
+.card-category img {
+    width: 65px;
+    height: 65px;
+    margin-top: 10%;
+}
+
+.cartao:hover {
+    box-shadow: 0px 5px 5px 0px #b1b1b1;
+    transform: translateY(-5px);
+    transition: 0.5s;
+    background-color: white;
+}
+
+main {
+    height: auto;
+    margin-top: 300px;
+}
+
+.container-rodape {
+    width: 100%;
+    float: left;
+    padding: 2% 4%;
+    text-align: center;
+    // margin-top: 20px;
+}
+
+
+/* modal animation */
+
+.modal-content {
+    animation-name: example;
+    animation-duration: 0.3s;
+}
+
+@keyframes example {
+    0% {
+        transform: scale(0.5)
+    }
+    75% {
+        transform: scale(1.1)
+    }
+    100% {
+        transform: scale(1)
+    }
+}

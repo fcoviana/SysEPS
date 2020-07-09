@@ -1,0 +1,22 @@
+{
+  "name": "back-end",
+  "version": "1.0.0",
+  "main": "serve.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/serve.js",
+    "dev": "nodemon src/serve.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv-safe": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.20.13",
+    "nodemon": "^2.0.2",
+    "pg": "^8.2.1"
+  },
+  "devDependencies": {
+    "sucrase": "^3.10.1"
+  }
+}

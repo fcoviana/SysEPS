@@ -1,0 +1,42 @@
+<header>
+    <a href="/" class="logo">SysEPS</a>
+    <div id="div-btn-menu">
+        <button (click)="mudarDisplay()" class="btn-menu">
+            <i class="fa fa-bars"></i>
+        </button>
+
+        <div class="user-menu" *ngIf="showToken()">
+            <div ngbDropdown>
+                <div class="row user-dados" id="dropdownBasic1" ngbDropdownToggle>
+                    <img src="../assets/foto-padrao.jpg" class="img-dropdown" />
+                    <div class="user-menu-name">
+                        <p>{{ company.name }}</p>
+                    </div>
+                </div>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                    <button ngbDropdownItem routerLink="/lojas" routerLinkActive="router-link-active" >Lojas</button>
+                    <button ngbDropdownItem routerLink="/produtos" routerLinkActive="router-link-active" >Produtos</button>
+                    <button ngbDropdownItem (click)="logout()">Sair</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <nav [ngStyle]="{'display': display}" class="menu">
+        <a (click)="mudarDisplay()" class="btn-close">
+            <i class="fa fa-times"></i>
+        </a>
+
+        <ul>
+            <li><a routerLink="/">Inicio</a></li>
+            <li><a (click)="openModalCompany()" *ngIf="!showToken()">Cadastrar-se</a></li>
+            <li><a (click)="openModalLogin()" *ngIf="!showToken()">Entrar</a></li>
+        </ul>
+    </nav>
+</header>
+
+<router-outlet></router-outlet>
+
+<footer class="rodape container-rodape bg-rodape-cor">
+    <app-rodape></app-rodape>
+</footer>

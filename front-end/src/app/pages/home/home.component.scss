@@ -1,0 +1,339 @@
+/*=========== BG COLORS ==========*/
+
+.bg-black-custom {
+    background-color: #130400;
+}
+
+.bg-white-custom {
+    background-color: #fff;
+}
+
+.bg-orange-custom {
+    background-color: #FF914D;
+}
+
+.container-custom {
+    width: 100%;
+    float: left;
+    padding: 3% 4%;
+    text-align: center;
+}
+
+
+/*=========== BANNER INICIAL ==========*/
+
+
+.banner-inicial {
+    width: 90%;
+    height: 280px;
+    float: left;
+    padding: 3% 4%;
+    margin-top: 7%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    text-align: center;
+    background: #ededed;
+    border-radius: 20px;
+}
+
+.title {
+    width: 100%;
+}
+
+.title h2 {
+    font-size: 2em;
+    color: black;
+    font-weight: 700;
+}
+
+.title h3 {
+    font-size: 1em;
+    color: black;
+}
+
+.buttons {
+    width: 100%;
+    height: 100%;
+    margin-top: 2%;
+}
+
+
+.buttons i {
+    float: right;
+}
+
+.btn-custom {
+    width: 80%;
+    font-size: 2em;
+    text-align: left;
+    cursor: pointer;
+    padding: 3%;
+    outline-style: none;
+}
+
+.btn-cadastrar {
+    color: #130400;
+    border-radius: 7px;
+}
+
+.btn-sobre {
+    color: #fff;
+    margin-top: 2%;
+    border-radius: 7px;
+    
+
+}
+
+.fa {
+    font-size: 30px;
+    margin-right: 5px;
+    padding: 10px;
+    width: 30px;
+}
+
+
+/*=========== SECAO DESTAQUES ==========*/
+
+ngb-carousel {
+    outline-style: none;
+}
+
+.carousel img {
+    width: 100%;
+    height: 400px;
+    border-radius: 20px;
+}
+
+/*=========== SECAO SOBRE NÓS ==========*/
+.secao h4 {
+    color: #FF914D;
+}
+p {
+    font-weight: bold;
+}
+
+/*=========== SECAO NEWSLETTER ==========*/
+
+.newsletter {
+    width: 100%;
+    height: 35vh;
+    float: left;
+    padding: 3% 4%;
+    margin-top: 5%;
+    text-align: center;
+    color: #fff;
+    background: #000;
+}
+
+.newsletter .text {
+    font-size: 1.6rem;
+    height: 100%;
+}
+
+.newsletter button {
+    width: 100%;
+    color: #130400;
+    padding: 4%;
+    cursor: pointer;
+    border-radius: 7px;
+    outline-style: none;
+    font-size: 1.2rem;
+}
+
+.pulse {
+    display: block;
+    border-radius: 10px;
+    background: #FF914D;
+    cursor: pointer;
+    box-shadow: #FF914D;
+    animation: pulse 1s infinite;
+    font-size: 1.2rem;
+}
+
+.pulse:hover {
+    animation: none;
+}
+
+
+@-webkit-keyframes pulse {
+    0% {
+        -webkit-box-shadow: white;
+    }
+    70% {
+        -webkit-box-shadow: white;
+    }
+    100% {
+        -webkit-box-shadow: white;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        -moz-box-shadow: white;
+        box-shadow: 0 0 0 0 rgb(255, 255, 255);
+    }
+    70% {
+        -moz-box-shadow: 0 0 0 10px rgba(255, 255, 255, 255);
+        box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+    }
+    100% {
+        -moz-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+        box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+    }
+}
+
+// @media screen and (min-width: 360px) {
+//     .buttons {
+//         width: 80%;
+//         height: 60%;
+//         margin-left: 10%;
+//         font-size: small;
+//     }
+//     .title{
+//         font-size: smaller;
+//     }
+
+//     .texto{
+//         font-size: small;
+//     }
+    
+// }
+
+// @media screen and (min-width: 480px) {
+//     .buttons {
+//         width: 80%;
+//         height: 50%;
+//         margin-left: 10%;
+//         font-size: small;
+        
+        
+//     }
+// }
+
+@media screen and (min-width: 768px) {
+    .secao-titulo {
+        margin-left: 5%
+    }
+    .newsletter {
+        padding: 1% 2%;
+    }
+    .newsletter h2 {
+        width: 40%;
+        font-size: 1.5em;
+        float: left;
+        text-align: left;
+        padding-top: 2%;
+        margin-left: 15%;
+    }
+    .newsletter h3 {
+        width: 40%;
+        font-size: 0.8em;
+        font-weight: 200;
+        padding-top: 8%;
+        margin-left: -43%;
+        float: left;
+        text-align: left;
+    }
+    .newsletter button {
+        width: 30%;
+        padding: 2%;
+        margin-top: -1%;
+        margin-right: 10%;
+        float: right;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .title {
+        width: 60%;
+        height: 100%;
+        float: left;
+        text-align: left;
+    }
+    .title h2 {
+        font-size: 2.5em;
+    }
+    .title h3 {
+        font-size: 1.5em;
+    }
+    .buttons {
+        width: 40%;
+        float: right;
+        padding-top: 0%;
+        margin-top: 0%;
+    }
+    .btn-custom {
+        padding: 5%;
+    }
+    .banner-inicial {
+        margin-top: 4.5%;       
+    }
+
+    .carousel img {
+        height: 600px;
+    }
+    
+    .newsletter h2 {
+        padding-top: 4%;
+    }
+    .newsletter h3 {
+        padding-top: 10%;
+    }
+    .newsletter button {
+        margin-top: 1%;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .newsletter h2 {
+        font-size: 2em;
+    }
+    .newsletter h3 {
+        font-size: 1.2em;
+    }
+    .newsletter button {
+        margin-top: 2%;
+    }
+    
+}
+
+.btn-enviar {
+    width: 15%;
+    background-color: #f0f7fe;
+    text-align: center;
+    cursor: pointer;
+    padding: 1%;
+    font-size: smaller;
+    // font-weight: bold;
+}
+
+.btn-fechar {
+    width: 15%;
+    background-color: #f0f7fe;
+    text-align: center;
+    cursor: pointer;
+    padding: 1%;
+    font-size: smaller;
+    // font-weight: bold;
+}
+
+.hvr-bounce-in {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    }
+    .hvr-bounce-in:hover, .hvr-bounce-in:focus, .hvr-bounce-in:active {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+    transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+}
+
+.mouse-pointer {
+    cursor: pointer;
+}

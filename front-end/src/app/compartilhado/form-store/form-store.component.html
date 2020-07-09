@@ -1,0 +1,39 @@
+<div class="modal-body">
+    <form #f="ngForm" (ngSubmit)="onSubmit()">
+         <div class="row">
+            <div class="form-group col-12">
+                <label for="name"><strong>Nome</strong></label>
+                <div class="from-group">
+                    <input type="text" class="form-control" [(ngModel)]="store.name" #name="ngModel" id="name" name="name" [class.is-invalid]="!name.valid && name.touched" required>
+                    <div *ngIf="!name.valid && name.touched" class="text-danger">
+                        Informe o nome.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-12">
+                <label for="description"><strong>Descrição</strong></label>
+                <div class="from-group">
+                    <input type="text" class="form-control" 
+                    [(ngModel)]="store.description" #description="ngModel"
+                    id="description" name="description"
+                      [class.is-invalid]="!description.valid && description.touched" 
+                      required>
+                    <div *ngIf="!description.valid && description.touched" class="text-danger">
+                        Informe a descrição.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-12">
+                <div class="">
+                    <button type="submit" [disabled]="!f.valid || formStatus == false" class="btn btn-success btn-block">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

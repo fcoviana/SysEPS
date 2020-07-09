@@ -1,0 +1,49 @@
+<div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Login</h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.close()">
+    <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
+<app-sucesso-msg></app-sucesso-msg>
+<app-erro-msg></app-erro-msg>
+
+<div class="modal-body">
+    <form #f="ngForm" (ngSubmit)="onLogin(f)">
+        <div class="row">
+            <div class="form-group col-12">
+                <label for="name"><strong>E-mail</strong></label>
+                <div class="from-group">
+                    <input type="email" class="form-control" 
+                        name="email" ngModel required #email="ngModel" [email]="true"
+                        [class.is-invalid]="!email.valid && email.touched">
+                        <div *ngIf="!email.valid && email.touched" class="text-danger">
+                            Informe o e-mail.
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-12">
+                <label for="name"><strong>Senha</strong></label>
+                <div class="from-group">
+                    <input type="password" class="form-control" 
+                        name="password" ngModel required #password="ngModel"
+                        [class.is-invalid]="!password.valid && password.touched">
+                        <div *ngIf="!password.valid && password.touched" class="text-danger">
+                            Informe a senha.
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-12">
+                <div class="">
+                    <button type="submit"  [disabled]="!f.valid" class="btn btn-success btn-block">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

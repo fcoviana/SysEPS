@@ -1,0 +1,47 @@
+<div class="modal-body">
+    <form #f="ngForm" (ngSubmit)="onSubmit()">
+         <div class="row">
+            <div class="form-group col-12">
+                <label for="name"><strong>Nome</strong></label>
+                <div class="from-group">
+                    <input type="text" class="form-control" [(ngModel)]="company.name" #name="ngModel" id="name" name="name" [class.is-invalid]="!name.valid && name.touched" required>
+                    <div *ngIf="!name.valid && name.touched" class="text-danger">
+                        Informe o nome.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-12">
+                <label for="email"><strong>E-mail</strong></label>
+                <div class="from-group">
+                    <input class="form-control" [(ngModel)]="company.email" [email]="true" #email="ngModel" type="email" id="email" name="email" [class.is-invalid]="!email.valid && email.touched" required>
+                    <div *ngIf="!email.valid && email.touched" class="text-danger">
+                        Informe o e-mail.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-12">
+                <label for="password"><strong>Senha</strong></label>
+                <div class="from-group">
+                    <input class="form-control" [(ngModel)]="company.password" #password="ngModel" type="password" id="password" name="password" [class.is-invalid]="!password.valid && password.touched" required>
+                    <div *ngIf="!password.valid && password.touched" class="text-danger">
+                        Informe a senha.
+                    </div>
+                </div>
+            </div>
+        </div> 
+
+        <div class="row">
+            <div class="form-group col-12">
+                <div class="">
+                    <button type="submit" [disabled]="!f.valid || formStatus == false" class="btn btn-success btn-block">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
