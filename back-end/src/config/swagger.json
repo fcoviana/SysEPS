@@ -1,0 +1,99 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "version": "1.0.0",
+      "title": "CM Desafio API",
+      "description": "Documentação da API desenvolvida no desafio da Casa Magalhães",
+      "license": {
+        "name": "MIT",
+        "url": "https://opensource.org/licenses/MIT"
+      }
+    },
+    "host": "localhost:3000/",
+    "tags": [
+      {
+        "name": "Produtos",
+        "description": "API para produtos no sistema"
+      },
+      {
+        "name": "Lojas",
+        "description": "API para lojas no sistema"
+      }
+    ],
+    "schemes": [
+      "http",
+      "https"
+    ],
+    "consumes": [
+      "application/json"
+    ],
+    "produces": [
+      "application/json"
+    ],
+    "paths": {
+      "/products": {
+        "get": {
+          "summary": "Obter todos os produtos",
+          "tags": [
+            "Produtos"
+          ],
+          "description": "Obter todos os produtos",
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "description": "Retorna todos os produtos",
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/Product"
+                }
+              }
+            },
+            "500":{
+              "description": "Internal Error"
+            }
+          }
+        },
+        "post": {
+          "summary": "Cadastro de produto",
+          "tags": [
+            "Produtos"
+          ],
+          "description": "Para cadastrar produtos no sistemas é necessário enviar os seguintes dados, o campo stores não é obrigatório",
+          "security": "",
+          "parameters": [
+            {
+              "name": "product",
+              "in": "body",
+              "description": "Produto",
+              "schema": {
+                "$ref": "#/definitions/Product"
+              }
+            }
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "201": {
+              "description": "Produto cadastrado com sucesso!",
+              "schema": {
+                "$ref": "#/definitions/Product"
+              }
+            },
+            "400":{
+              "description": "Campos obrigatórios",
+              "schema": {
+                "$ref": "#/definitions/400 ou 404"
+              }
+            },
+            "500":{
+              "description": "Internal Error"
+            }
+          }
+        }
+      }
+    }
+  }
