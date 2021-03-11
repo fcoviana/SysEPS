@@ -1,18 +1,14 @@
 <h2 align="center"> SysEPS - Sistema de Cadastro de Empresa </h2>
 
 #### Back-end
-<ul>
-  <li> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1024px-Node.js_logo.svg.png" alt="nodejs" height="22"> <strong>   Node.js </strong> </li>
-  <li> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/800px-Postgresql_elephant.svg.png" alt="postgress" height="22"> <strong>   PostgreSQL </strong> </li>
-  <li> <img src="https://jwt.io/img/pic_logo.svg" alt="jwt" height="22"> <strong>   JWT </strong> </li>
-</ul>
+- NodeJs
+- PostgreSQL
+- JWT
 
 #### Front-end
-<ul>
-  <li> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/800px-Angular_full_color_logo.svg.png" alt="angular" height="22"> <strong>   Angular </strong> </li>
-</ul>
+- Angular
 
----
+------------
 
 #### Dependências
 - NodeJs
@@ -66,10 +62,6 @@ sudo docker-compose stop
 ```shell
 https://www.getpostman.com/collections/9fbe73b50c9f0f4076ae
 ```
-
-
----
-
 
 ---
 
