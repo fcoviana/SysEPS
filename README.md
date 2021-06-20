@@ -8,15 +8,11 @@
 #### Front-end
 - Angular
 
-------------
-
 #### Dependências
 - NodeJs
 - Express
 - Angular CLI
 - PG (PostgreSQL) ou Docker
-
-------------
 
 #### Comandos NodeJS
 ###### Baixar dependência
@@ -28,8 +24,6 @@
     npm dev || npm start
 ```
 
-------------
-
 #### Comandos Angular
 ###### Baixar dependência
 ```shell
@@ -39,8 +33,6 @@
 ```shell
     ng s
 ```
-
-------------
 
 #### Comandos Docker - DB
 ######   Verificar
@@ -56,13 +48,8 @@ sudo docker-compose up -d
 sudo docker-compose stop
 ```
 
-------------
 #### Links
 ######   Postman
 ```shell
 https://www.getpostman.com/collections/9fbe73b50c9f0f4076ae
 ```
-
----
-
-<h4 align="center"> <em></></em> by <a href="https://github.com/Francisco1030" target="_blank"> Francisco Viana</a> </h4>
