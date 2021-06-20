@@ -1,4 +1,4 @@
-<h2 align="center"> SysEPS - Sistema de Cadastro de Empresa </h2>
+# SysEPS - Sistema de Cadastro de Empresa
 
 #### Back-end
 - NodeJs
