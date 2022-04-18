@@ -1,12 +1,9 @@
-import express from "express";
-
-import CompanyController from "./controllers/CompanyController";
-import ProductsController from "./controllers/ProductsController";
-import StoresControllers from "./controllers/StoresController";
-import SessionController from "./controllers/SessionControler";
-
-import verifyJWT from "./utils/jwt";
-
+const express = require("express");
+const CompanyController = require("./controllers/CompanyController");
+const ProductsController = require("./controllers/ProductsController");
+const StoresControllers = require("./controllers/StoresController");
+const SessionController = require("./controllers/SessionControler");
+const verifyJWT =  require("./utils/jwt");
 const routes = express.Router();
 
 routes.post("/sessions/login", SessionController.login);
@@ -27,8 +24,5 @@ routes.get("/stores", StoresControllers.index);
 routes.get("/stores/:id", StoresControllers.getById);
 routes.put("/stores/:id", verifyJWT, StoresControllers.update);
 routes.delete("/stores/:id", verifyJWT, StoresControllers.delete);
-
-//ROTAS PARA 
-// routes.get("/profile", ProfileCompanyController.index);
 
 module.exports = routes;

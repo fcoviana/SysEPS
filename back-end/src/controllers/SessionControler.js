@@ -1,32 +1,29 @@
-import connection from "../database/connection";
-import jwt from "jsonwebtoken";
+const connection = require("../database/connection");
+const jwt = require("jsonwebtoken");
 require("dotenv-safe").config();
 
-module.exports = {
-
+class SessionControler {
   async login(req, res) {
     const { email, password } = req.body;
-
     const company = await connection("companys")
-      .where("email", email)
+      .where({ email })
       .select("*")
       .first();
-
-    if (req.body.email === company.email && req.body.password === company.password) {
-
+    const isEqualEmail = req.body.email === company.email;
+    const isEqualPassword = req.body.email === company.email;
+    if (isEqualEmail && isEqualPassword) {
       const id = company.id;
-      var token = jwt.sign({ id }, process.env.SECRET, {
-        //expiresIn: 300 // expires in 5min
+      const token = jwt.sign({ id }, process.env.SECRET, {
+        expiresIn: 300,
       });
-      return res.json({ auth: true, token: token, company: company });
+      return res.json({ auth: true, token, company });
     }
-
-    res.status(500).json({ message: 'Login inválido!' });
-
-  },
+    return res.status(500).json({ message: "Login inválido!" });
+  }
 
   async logout(req, res) {
-    res.json({ auth: false, token: null });
-  },
+    return res.json({ auth: false, token: null });
+  }
+}
 
-};
+module.exports = new SessionControler();
