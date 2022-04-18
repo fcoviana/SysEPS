@@ -1,0 +1,15 @@
+version: '3'
+services:
+  app:
+    container_name: api-syseps
+    build: .
+    image: back-end
+    command: sh -c "npm run dev"
+    privileged: true
+    volumes:
+      - .:/usr/src/app/
+      - ./node_modules:/usr/src/app/node_modules
+    ports:
+      - "3000:3000"
+    env_file:
+     - .env
