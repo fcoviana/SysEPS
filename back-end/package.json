@@ -5,7 +5,9 @@
   "license": "MIT",
   "scripts": {
     "start": "node src/serve.js",
-    "dev": "nodemon src/serve.js"
+    "dev": "nodemon src/serve.js",
+    "migrations:run": "npx knex migrate:latest",
+    "migrations:down": "npx knex migrate:rollback"
   },
   "dependencies": {
     "cors": "^2.8.5",
