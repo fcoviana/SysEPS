@@ -5,7 +5,7 @@ module.exports = {
       host: "127.0.0.1",
       user: "postgres",
       password: "postgres",
-      database: "development",
+      database: "syseps_db",
       charset: "utf8",
     },
     migrations: {
