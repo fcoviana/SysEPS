@@ -5,7 +5,7 @@ exports.up = function (knex) {
     table.string("description").notNullable();
     table.decimal("price").notNullable();
 
-    table.integer("company_id").notNullable();
+    table.integer("company_id").unsigned().notNullable();
     table.foreign("company_id").references("id")
     .inTable("companys")
     .onUpdate('CASCADE')

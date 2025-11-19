@@ -4,7 +4,7 @@ exports.up = function (knex) {
     table.string("name").notNullable();
     table.string("description").notNullable();
 
-    table.integer("company_id").notNullable();
+    table.integer("company_id").unsigned().notNullable();
 
     table.foreign("company_id").references("id")
     .inTable("companys")

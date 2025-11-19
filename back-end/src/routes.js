@@ -6,6 +6,10 @@ const SessionController = require("./controllers/SessionControler");
 const verifyJWT =  require("./utils/jwt");
 const routes = express.Router();
 
+routes.get("/", (req, res) => {
+  return res.json({ status: "ok" });
+});
+
 routes.post("/sessions/login", SessionController.login);
 routes.post("/sessions/logout", SessionController.logout);
 
